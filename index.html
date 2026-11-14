@@ -182,10 +182,12 @@ a{color:inherit}
 .brand-card:hover .shot-site img{transform:scale(1.03)}
 .pf-visual{background:radial-gradient(120% 100% at 50% 100%,#EEF3E4 0%,#FBF9F2 70%);display:grid;place-items:center}
 .pf-visual img{width:auto;height:52%;max-width:60%;object-fit:contain}
-.ad-panel{background:linear-gradient(160deg,#C8161D 0%,#A70F16 100%);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:1.4rem 1.5rem}
-.ad-since{margin:0;font:400 clamp(3.4rem,7vw,4.6rem)/.9 var(--serif);letter-spacing:-.03em}
-.ad-since span{display:block;font:italic 400 1rem var(--serif);letter-spacing:0;opacity:.85;margin-bottom:.35rem}
-.ad-line{margin:.6rem 0 0;font-size:.9rem;opacity:.9}
+.ad-panel{background:linear-gradient(160deg,#C8161D 0%,#A70F16 100%);display:flex;align-items:flex-end;justify-content:center;padding:1.4rem 1.4rem 0}
+.browser{margin:0;width:100%;background:#fff;border-radius:10px 10px 0 0;overflow:hidden;box-shadow:0 -10px 30px -16px rgba(0,0,0,.45);transition:transform .6s var(--ease)}
+.browser-bar{display:flex;gap:5px;padding:7px 9px;background:#F1EEEA;border-bottom:1px solid #E2DDD6}
+.browser-bar i{width:7px;height:7px;border-radius:50%;background:#D5CFC6}
+.browser img{display:block;width:100%;height:auto}
+.brand-card:hover .browser{transform:translateY(-4px)}
 .b-mark{display:block;height:2rem;width:auto;max-width:9rem;object-fit:contain;object-position:left center;margin:0 0 1rem}
 .b-mark-tall{height:3.4rem;margin-bottom:.9rem}
 .b-mark-wide{height:1.15rem;max-width:11rem;margin-top:.4rem;margin-bottom:1.4rem}
@@ -378,7 +380,7 @@ footer p{margin:0}
       <ul class="brands">
         <li class="reveal">
           <article class="brand-card" aria-labelledby="h-ad">
-            <div class="b-visual ad-panel" aria-hidden="true"><p class="ad-since"><span>Sinds</span>2014</p><p class="ad-line">Webshop in gezondheid en zelfzorg</p></div>
+            <div class="b-visual ad-panel"><figure class="browser"><span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/ad-webshop.jpg" width="800" height="448" loading="lazy" decoding="async" alt="Bovenkant van de webshop adviesdrogisterij.nl met menu en banners."></figure></div>
             <div class="b-body">
               <img class="b-mark b-mark-wide" src="img/adviesdrogisterij-logo.svg" width="783" height="93" loading="lazy" decoding="async" alt="Logo Adviesdrogisterij.nl">
               <p class="v-tags">E-commerce · Ondernemerschap · Gezondheid · Sinds 2014</p>
