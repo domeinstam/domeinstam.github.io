@@ -3,22 +3,198 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Apps van Domein Stam</title>
+<title>Domein Stam · Digitale ideeën, praktische toepassingen</title>
+<meta name="description" content="Ontwikkelportfolio van Rens Stam (Domein Stam): ondernemer, drogist en praktisch probleemoplosser. Digitale toepassingen voor leren, gezondheid, beweging en persoonlijke ontwikkeling.">
+<meta name="author" content="Rens Stam">
+<link rel="canonical" href="https://apps.domeinstam.nl/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Domein Stam">
+<meta property="og:title" content="Domein Stam · Digitale ideeën, praktische toepassingen">
+<meta property="og:description" content="Ontwikkelportfolio van Rens Stam: digitale toepassingen voor leren, gezondheid, beweging en persoonlijke ontwikkeling.">
+<meta property="og:url" content="https://apps.domeinstam.nl/">
+<meta name="theme-color" content="#F6F2EA">
 <style>
-body{font-family:system-ui,sans-serif;max-width:34rem;margin:3rem auto;padding:0 1rem;line-height:1.5;color:#1d2b30}
-h1{margin-bottom:.25rem}
-ul{list-style:none;padding:0}
-li a{display:block;padding:.9rem 1rem;margin:.5rem 0;border:2px solid #2f7f7a;border-radius:12px;color:#1a6b66;font-weight:700;text-decoration:none}
-li a:hover{background:#e8f5f3}
+:root{
+  --bg:#F6F2EA;          /* warm off-white */
+  --card:#FFFDF9;
+  --ink:#1F2723;         /* donkere tekst */
+  --muted:#5B635E;
+  --line:#E2DACB;
+  --accent:#2F5A45;      /* rustig bosgroen */
+  --accent-soft:#E7EEE8;
+  --warm:#8A5A17;        /* hars, alleen voor status */
+  --warm-soft:#F4E9D6;
+  --radius:14px;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 var(--sans)}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1rem}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:1rem;top:1rem;background:var(--card);padding:.5rem .75rem;z-index:10}
+
+/* kop */
+header{padding:3.5rem 0 2.5rem}
+.mark{font:600 .8rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ink);margin:0 0 .6rem}
+.mark span{display:block;margin-top:.55rem;font-weight:400;letter-spacing:.04em;text-transform:none;color:var(--muted);font-size:.9rem}
+h1{font:400 clamp(2rem,6vw,3.1rem)/1.12 var(--serif);margin:2.25rem 0 1.25rem;max-width:24ch;letter-spacing:-.01em}
+.lead{max-width:38rem;color:var(--ink);font-size:1.075rem;margin:0 0 .9rem}
+.lead + .lead{color:var(--muted);font-size:1rem}
+
+/* secties */
+section{padding:2.25rem 0;border-top:1px solid var(--line)}
+h2{font:600 .8rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 1.5rem}
+
+/* projectkaarten */
+.grid{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+@media (min-width:44rem){.grid{grid-template-columns:repeat(6,1fr)}.grid>li{grid-column:span 3}.grid>li.small{grid-column:span 2}}
+.card{position:relative;display:flex;flex-direction:column;height:100%;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem 1.4rem 1.25rem;transition:border-color .15s ease,box-shadow .15s ease}
+.card:hover{border-color:#C9BEA9;box-shadow:0 2px 14px rgba(31,39,35,.06)}
+.card:focus-within{border-color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .9rem;padding:0;list-style:none}
+.tag{font-size:.75rem;line-height:1;padding:.4rem .55rem;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.tag.status{background:var(--warm-soft);color:var(--warm)}
+.card h3{font:500 1.4rem/1.25 var(--serif);margin:0}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a::after{content:"";position:absolute;inset:0;border-radius:var(--radius)}  /* hele kaart klikbaar */
+.card h3 a:focus-visible{outline:none}
+.card:has(h3 a:focus-visible){outline:3px solid var(--accent);outline-offset:3px}
+.tagline{margin:.2rem 0 0;color:var(--muted);font-style:italic;font-family:var(--serif)}
+.card p.desc{margin:.8rem 0 0}
+.card .note{margin:.6rem 0 0;font-size:.875rem;color:var(--muted)}
+.go{margin-top:auto;padding-top:1.1rem;font-size:.9rem;font-weight:600;color:var(--accent)}
+.go span{display:inline-block;transition:transform .15s ease}
+.card:hover .go span{transform:translateX(3px)}
+
+@media (min-width:44rem){.grid>li.wide{grid-column:1 / -1}.wide .card{padding:1.6rem 1.75rem 1.4rem}.wide .desc,.wide .note{max-width:44rem}}
+
+/* over mij + contact */
+.about p{max-width:38rem;margin:0 0 .9rem}
+.about-lead{font:400 1.35rem/1.35 var(--serif)}
+.sign{font-family:var(--serif);font-style:italic;color:var(--accent)}
+.about-grid{display:grid;gap:2rem}
+@media (min-width:52rem){.about-grid{grid-template-columns:1.4fr 1fr;gap:3rem}}
+.fields{margin:0;display:grid;gap:1.1rem;align-content:start}
+.fields div{border-left:2px solid var(--line);padding-left:1rem}
+.fields dt{font-weight:600;font-size:.95rem}
+.fields dd{margin:.15rem 0 0;color:var(--muted);font-size:.925rem}
+.contact p{max-width:38rem;margin:0 0 1.1rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.1rem;border:1.5px solid var(--accent);border-radius:999px;color:var(--accent);font-weight:600;text-decoration:none}
+.btn:hover{background:var(--accent);color:#fff}
+
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.875rem}
+footer p{margin:0}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<h1>Apps van Domein Stam</h1>
-<p>Oefen- en leerapps.</p>
-<ul>
-<li><a href="azie-landen-spel/">Landen in en rondom Azië</a></li>
-<li><a href="nl-waterwerken-spel/">Nederlandse waterwerken</a></li>
-<li><a href="trainingsplan/">Trainingsplan</a></li>
-</ul>
+<a class="skip" href="#projecten">Naar de projecten</a>
+
+<div class="wrap">
+<header>
+  <p class="mark">Domein Stam<span>Meedenken. Verbeteren. Realiseren.</span></p>
+  <h1>Digitale ideeën. Praktische toepassingen.</h1>
+  <p class="lead">Ik ontwikkel en experimenteer met digitale toepassingen op het gebied van leren, gezondheid, beweging en persoonlijke ontwikkeling. Met behulp van AI vertaal ik ideeën naar praktische en gebruiksvriendelijke oplossingen.</p>
+  <p class="lead">Van kleine experimenten tot uitgebreidere applicaties.</p>
+</header>
+
+<main>
+<section id="projecten" aria-labelledby="h-projecten">
+  <h2 id="h-projecten">Mijn projecten</h2>
+  <ul class="grid">
+    <li>
+      <article class="card">
+        <ul class="tags"><li class="tag">Gezondheid &amp; beweging</li><li class="tag status">In ontwikkeling</li></ul>
+        <h3><a href="trainingsplan/">Atempo</a></h3>
+        <p class="tagline">Move. Recover. Grow.</p>
+        <p class="desc">Een persoonlijke trainingsapp voor hardlopen, kracht, mobiliteit en herstel.</p>
+        <p class="go" aria-hidden="true">Openen <span>→</span></p>
+      </article>
+    </li>
+    <li>
+      <article class="card">
+        <ul class="tags"><li class="tag">Ontspanning</li><li class="tag status">In ontwikkeling</li></ul>
+        <h3><a href="https://app.phytoforsan.nl/">Restavia</a></h3>
+        <p class="tagline">Breathe. Feel. Flow.</p>
+        <p class="desc">Een digitale toepassing gericht op ademhaling, humming en ontspanning.</p>
+        <p class="go" aria-hidden="true">Openen <span>→</span></p>
+      </article>
+    </li>
+    <li class="wide">
+      <article class="card">
+        <ul class="tags"><li class="tag status">Praktijkvoorbeeld</li></ul>
+        <h3><a href="Antwoorden-Adviesdrogisterij.nl/">Antwoorden Adviesdrogisterij.nl</a></h3>
+        <p class="tagline">Gezondheid · Ondernemerschap · AI · Digitale innovatie</p>
+        <p class="desc">Een digitale toepassing ter ondersteuning van de klantcommunicatie binnen Adviesdrogisterij.nl. Ontwikkeld vanuit jarenlange praktijkervaring in de drogisterij- en gezondheidsbranche, gecombineerd met kennis van bedrijfsvoering, klantcommunicatie en digitale technologie.</p>
+        <p class="desc">Het project laat zien hoe ik branchekennis, zakelijke inzichten en zorgvuldigheid combineer bij het ontwikkelen van praktische AI-oplossingen.</p>
+        <p class="note">Een hulpmiddel voor medewerkers bij het opstellen van antwoorden op klantvragen; het geeft zelf geen medisch of juridisch advies. Ontwikkeld voor gebruik binnen Adviesdrogisterij.nl en alleen toegankelijk met wachtwoord.</p>
+        <p class="go" aria-hidden="true">Naar inlogscherm <span>→</span></p>
+      </article>
+    </li>
+    <li class="small">
+      <article class="card">
+        <ul class="tags"><li class="tag">Leren</li></ul>
+        <h3><a href="azie-landen-spel/">Landen in en rondom Azië</a></h3>
+        <p class="desc">Een interactieve educatieve toepassing voor het oefenen van aardrijkskunde.</p>
+        <p class="go" aria-hidden="true">Openen <span>→</span></p>
+      </article>
+    </li>
+    <li class="small">
+      <article class="card">
+        <ul class="tags"><li class="tag">Leren</li></ul>
+        <h3><a href="nl-waterwerken-spel/">Nederlandse waterwerken</a></h3>
+        <p class="desc">Een educatieve toepassing over Nederlandse waterwerken.</p>
+        <p class="go" aria-hidden="true">Openen <span>→</span></p>
+      </article>
+    </li>
+    <li class="small">
+      <article class="card">
+        <ul class="tags"><li class="tag">Leren</li></ul>
+        <h3><a href="vs-staten-spel/">VS staten oefenen</a></h3>
+        <p class="desc">Een interactieve educatieve toepassing voor het oefenen van de 48 staten van de Verenigde Staten.</p>
+        <p class="go" aria-hidden="true">Openen <span>→</span></p>
+      </article>
+    </li>
+  </ul>
+</section>
+
+<section class="about" id="over-mij" aria-labelledby="h-over">
+  <h2 id="h-over">Over mij</h2>
+  <div class="about-grid">
+    <div>
+      <p class="about-lead">Ik ben Rens Stam, ondernemer, organisator en praktisch probleemoplosser.</p>
+      <p>Mijn achtergrond ligt in de detailhandel, e-commerce en gezondheidsbranche, waarin ik inmiddels twintig jaar ervaring heb. Daarnaast beschik ik over een juridische opleiding en een brede praktische IT-achtergrond.</p>
+      <p>Ik combineer zakelijke, organisatorische en juridische inzichten met technologie om problemen te doorgronden, bedrijfsprocessen te verbeteren en nieuwe toepassingen te ontwikkelen.</p>
+      <p>Ik ben geen traditionele programmeur. Mijn kracht ligt in het herkennen van mogelijkheden, het verbinden van verschillende disciplines en het daadwerkelijk realiseren van praktische oplossingen.</p>
+      <p>Met Domein Stam ondersteun ik ondernemers en organisaties als sparringpartner, organisatieverbeteraar en hands-on professional.</p>
+      <p class="sign">Meedenken. Verbeteren. Realiseren.</p>
+    </div>
+    <dl class="fields">
+      <div><dt>Drogisterij &amp; gezondheid</dt><dd>Gecertificeerd drogist; vanaf mijn 25e jarenlang een eigen drogisterij, daarnaast e-commerce in de gezondheidssector.</dd></div>
+      <div><dt>Ondernemerschap</dt><dd>Bedrijfsvoering, commercie, inkoop en verkoop, leveranciers, organisatieontwikkeling en procesverbetering.</dd></div>
+      <div><dt>Juridische blik</dt><dd>Juridische opleiding; oog voor regelgeving, verantwoordelijkheden, afspraken en risico's.</dd></div>
+      <div><dt>IT &amp; AI</dt><dd>Brede praktische IT-achtergrond; technologie inzetten om problemen op te lossen.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="contact" aria-labelledby="h-contact">
+  <h2 id="h-contact">Contact</h2>
+  <p>Een idee, een vraag of benieuwd naar een van de projecten? Neem gerust contact op met Domein Stam.</p>
+  <!-- WhatsApp Business Domein Stam: 06-23906070 (wa.me-notatie: 31 + nummer zonder 0, zonder + of spaties) -->
+  <a class="btn" href="https://wa.me/31623906070" rel="noopener">WhatsApp Domein Stam</a>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Domein Stam · Rens Stam</p>
+</footer>
+</div>
 </body>
 </html>
