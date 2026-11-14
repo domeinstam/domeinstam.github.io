@@ -103,10 +103,11 @@ a{color:inherit}
 
 /* ---------- projecten ---------- */
 .feat-grid{display:grid;gap:1.25rem}
-@media (min-width:56rem){.feat-grid{grid-template-columns:7fr 5fr}.feat{min-height:30rem}.phone{width:17rem}}
-.feat{position:relative;overflow:hidden;border-radius:var(--radius);display:grid;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+@media (min-width:56rem){.feat-grid{grid-template-columns:1fr 1fr}.phone{width:16.5rem}}
+.feat{position:relative;overflow:hidden;border-radius:var(--radius);display:grid;grid-template-rows:auto 1fr;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
 .feat:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(27,37,32,.55)}
-.feat-text{position:relative;z-index:2;padding:1.75rem 1.75rem 0}
+.feat-text{position:relative;z-index:2;padding:2rem 2rem 0}
+@media (min-width:56rem){.feat-text{padding:2.5rem 2.5rem 0}}
 .feat h3{margin:.9rem 0 0;font:400 clamp(2.2rem,5vw,3.2rem)/1 var(--serif);letter-spacing:-.01em}
 .feat h3 a{text-decoration:none}
 .feat h3 a::after{content:"";position:absolute;inset:0;z-index:3;border-radius:var(--radius)}
@@ -120,29 +121,21 @@ a{color:inherit}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
 .tag{font-size:.74rem;line-height:1;padding:.42rem .62rem;border-radius:999px;font-weight:500}
 
-.phone{margin:0;justify-self:center;align-self:end;width:15.5rem;margin-top:1.75rem;margin-bottom:-7.5rem;transition:transform .5s var(--ease)}
+.phone{margin:0;justify-self:center;align-self:end;width:15.5rem;margin-top:2rem;margin-bottom:-8rem;transition:transform .5s var(--ease)}
 .phone img{width:100%;height:auto;border-radius:30px;border:7px solid #0E1512;box-shadow:0 30px 60px -25px rgba(0,0,0,.55);background:#fff}
-.feat:hover .phone{transform:translateY(-8px) rotate(-1deg)}
+.feat:hover .phone{transform:translateY(-8px)}
 
 .atempo{background:radial-gradient(120% 90% at 100% 0%,#0B4B6E 0%,var(--atempo) 55%);color:#EAF3F6}
 .atempo .tag{background:rgba(255,255,255,.12);color:#DDF0F3}
 .atempo .tag.status{background:#F3D9A6;color:#4A3205}
 .atempo .slogan{color:#9FD9DF}
 .atempo .cta{background:#EAF3F6;color:var(--atempo)}
-@media (min-width:40rem){
-  .atempo{grid-template-columns:1.1fr .9fr}
-  .atempo .feat-text{padding:2.5rem 0 2.5rem 2.5rem;align-self:center}
-  .atempo .phone{margin-top:2.5rem}
-}
-.atempo::before{content:"";position:absolute;width:30rem;height:30rem;right:-9rem;bottom:-13rem;border-radius:50%;border:1px solid rgba(159,217,223,.25);box-shadow:0 0 0 2.5rem rgba(159,217,223,.05),0 0 0 5rem rgba(159,217,223,.04)}
 
 .restavia{background:linear-gradient(170deg,#EEF4F2 0%,var(--restavia) 60%,#CFDDDC 100%);color:var(--restavia-ink)}
 .restavia .tag{background:rgba(36,70,90,.09);color:var(--restavia-ink)}
 .restavia .tag.status{background:#F3D9A6;color:#4A3205}
 .restavia .slogan{color:#3F6B67}
 .restavia .cta{background:var(--restavia-ink);color:#EEF4F2}
-.restavia::before{content:"";position:absolute;width:20rem;height:20rem;left:50%;bottom:-6rem;translate:-50% 0;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.75) 0%,rgba(255,255,255,0) 65%);animation:breathe 9s ease-in-out infinite}
-@keyframes breathe{0%,100%{transform:scale(.85);opacity:.6}50%{transform:scale(1.08);opacity:1}}
 
 /* zakelijk praktijkvoorbeeld */
 .biz{position:relative;margin-top:1.25rem;border-radius:var(--radius);background:#17211D;color:#ECE6DA;display:grid;gap:2rem;padding:1.75rem;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
@@ -173,7 +166,7 @@ a{color:inherit}
 /* ---------- ondernemerschap & merken ---------- */
 .biz-sec{background:var(--paper);border-top:1px solid var(--line)}
 .brands{list-style:none;margin:0;padding:0;display:grid;gap:1.25rem}
-@media (min-width:60rem){.brands{grid-template-columns:repeat(3,1fr)}.brands>li:nth-child(2){margin-top:2.5rem}}
+@media (min-width:60rem){.brands{grid-template-columns:repeat(3,1fr)}}
 .brand-card{height:100%;display:flex;flex-direction:column;border-radius:var(--radius);overflow:hidden;background:var(--bg);border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
 .brand-card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -28px rgba(27,37,32,.5)}
 .b-visual{position:relative;aspect-ratio:4/3;overflow:hidden}
@@ -189,26 +182,21 @@ a{color:inherit}
 .v-link{align-self:flex-start;margin-top:auto;padding-top:1rem;font-weight:600;font-size:.9rem;color:var(--forest)}
 .v-link.ul{background-position:0 100%}
 
-/* Adviesdrogisterij: zakelijk, warm papier met jaartal en disciplines */
-.b-ad .b-visual{background:#EFE3CC;padding:1.1rem 1.2rem;gap:.6rem;display:flex;flex-direction:column;justify-content:space-between}
-.b-year{margin:0;font:400 clamp(2.6rem,5.5vw,3.4rem)/.9 var(--serif);color:var(--resin);letter-spacing:-.03em}
-.b-year span{font:italic 400 .95rem var(--serif);color:var(--resin-ink);letter-spacing:0;margin-right:.4rem}
-.b-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.3rem}
-.b-chips li{font-size:.7rem;line-height:1.2;padding:.28rem .5rem;border-radius:999px;background:rgba(255,252,246,.75);border:1px solid #DCCBA8;color:#4E3A17;transition:background-color .25s,color .25s}
-.brand-card:hover .b-chips li:nth-child(odd){background:var(--forest);color:#F4EFE5;border-color:var(--forest)}
-
-/* PhytoForsan: diep bladgroen */
-.leaf{background:radial-gradient(90% 90% at 20% 100%,#2F5A45 0%,#173126 70%);display:grid;place-items:center}
-.leaf svg{position:absolute;inset:0;width:100%;height:100%}
-.vein{fill:none;stroke:#8FB79A;stroke-width:1.4;opacity:.45;stroke-linecap:round}
-.leaf-word{position:relative;font:400 clamp(2rem,4.2vw,2.6rem) var(--serif);color:#EDE6D6;letter-spacing:-.01em}
-.leaf-word i{color:#D7B57A}
-
-/* Health of Nature: echte productfoto met logo */
-.photo img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
-.brand-card:hover .photo>img{transform:scale(1.04)}
-.b-logo{position:absolute;left:.9rem;top:.9rem;background:rgba(255,255,255,.92);border-radius:12px;padding:.45rem .7rem;box-shadow:0 6px 18px -10px rgba(0,0,0,.35)}
-.b-logo img{width:7.5rem;height:auto}
+/* echte beelden + klein logo boven de naam */
+.shot-site{background:#EEE9DF}
+.shot-site img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .8s var(--ease)}
+.brand-card:hover .shot-site img{transform:scale(1.03)}
+.pf-visual{background:radial-gradient(120% 100% at 50% 100%,#EEF3E4 0%,#FBF9F2 70%);display:grid;place-items:center}
+.pf-visual img{width:auto;height:52%;max-width:60%;object-fit:contain}
+.ad-panel{background:linear-gradient(160deg,#C8161D 0%,#A70F16 100%);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:1.4rem 1.5rem}
+.ad-since{margin:0;font:400 clamp(3.4rem,7vw,4.6rem)/.9 var(--serif);letter-spacing:-.03em}
+.ad-since span{display:block;font:italic 400 1rem var(--serif);letter-spacing:0;opacity:.85;margin-bottom:.35rem}
+.ad-line{margin:.6rem 0 0;font-size:.9rem;opacity:.9}
+.b-mark{display:block;height:2rem;width:auto;max-width:9rem;object-fit:contain;object-position:left center;margin:0 0 1rem}
+.b-mark-tall{height:3.4rem;margin-bottom:.9rem}
+.b-mark-wide{height:1.15rem;max-width:11rem;margin-top:.4rem;margin-bottom:1.4rem}
+.b-chips{list-style:none;margin:1rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.3rem}
+.b-chips li{font-size:.72rem;line-height:1.2;padding:.3rem .55rem;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--muted)}
 
 /* rode draad */
 .route{list-style:none;margin:2.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem .25rem;align-items:center;counter-reset:r}
@@ -218,8 +206,6 @@ a{color:inherit}
 .route li:not(:last-child)::after{content:"";width:1.6rem;height:1.5px;background:var(--line);margin:0 .35rem}
 @media (max-width:40rem){.route{flex-direction:column;align-items:flex-start;gap:.6rem}.route li::after{display:none!important}}
 @media (prefers-reduced-motion:no-preference){
-  .vein{stroke-dasharray:420;stroke-dashoffset:0;transition:stroke-dashoffset 2.4s var(--ease)}
-  .js .reveal:not(.in) .vein{stroke-dashoffset:420}
 }
 
 /* ---------- over mij ---------- */
@@ -382,29 +368,8 @@ footer p{margin:0}
 
       <ul class="brands">
         <li class="reveal">
-          <article class="brand-card b-ad" aria-labelledby="h-ad">
-            <div class="b-visual" aria-hidden="true">
-              <p class="b-year"><span>Sinds</span>2014</p>
-              <ul class="b-chips">
-                <li>Commercie &amp; online marketing</li><li>E-commerce</li><li>Inkoop &amp; leveranciers</li><li>Logistiek &amp; voorraad</li><li>Personeel</li><li>Organisatie&shy;ontwikkeling</li><li>Procesverbetering</li><li>Financiën</li><li>IT &amp; automatisering</li>
-              </ul>
-            </div>
-            <div class="b-body">
-              <p class="v-tags">E-commerce · Ondernemerschap · Gezondheid</p>
-              <h3 id="h-ad" class="v-name">Adviesdrogisterij.nl</h3>
-              <p class="b-lead">Ervaring met het ontwikkelen en exploiteren van een online handelsbedrijf.</p>
-              <p>Een e-commerceonderneming in gezondheidsproducten en zelfzorgmiddelen die ik sinds 2014 jarenlang heb geleid en ontwikkeld: van commerciële strategie en bedrijfsvoering tot organisatieverbetering, logistiek en digitalisering. Betrokken bij vrijwel alle aspecten van de bedrijfsvoering.</p>
-              <p class="v-status"><span class="v-badge">Overdracht</span> Wordt in november 2026 overgedragen aan een nieuwe eigenaar en is daarna geen onderdeel van Domein Stam.</p>
-              <a class="v-link ul" href="https://www.adviesdrogisterij.nl/" rel="noopener">adviesdrogisterij.nl <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-        </li>
-        <li class="reveal">
-          <article class="brand-card b-pf" aria-labelledby="h-pf">
-            <div class="b-visual leaf" aria-hidden="true">
-              <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" focusable="false"><path class="vein" d="M40 260 C120 200 200 150 360 40"/><path class="vein" d="M120 205 C110 160 120 120 150 90"/><path class="vein" d="M120 205 C160 210 200 205 240 190"/><path class="vein" d="M200 150 C195 110 205 80 230 55"/><path class="vein" d="M200 150 C240 150 280 140 310 120"/><path class="vein" d="M275 100 C275 80 285 65 300 55"/></svg>
-              <span class="leaf-word">Phyto<i>Forsan</i></span>
-            </div>
+          <article class="brand-card" aria-labelledby="h-pf">
+            <div class="b-visual pf-visual"><img src="img/phytoforsan-logo.png" width="480" height="386" loading="lazy" decoding="async" alt="Logo PhytoForsan"></div>
             <div class="b-body">
               <p class="v-tags">Merkontwikkeling · Gezondheid · Productontwikkeling</p>
               <h3 id="h-pf" class="v-name">PhytoForsan</h3>
@@ -414,18 +379,33 @@ footer p{margin:0}
           </article>
         </li>
         <li class="reveal">
-          <article class="brand-card b-hon" aria-labelledby="h-hon">
-            <div class="b-visual photo">
-              <img src="img/hon-chlorella.jpg" width="720" height="540" loading="lazy" decoding="async" alt="Verpakking van Natural Green Chlorella van Health of Nature naast een plant.">
-              <span class="b-logo"><img src="img/hon-logo.png" width="400" height="129" loading="lazy" decoding="async" alt="Logo Health of Nature"></span>
-            </div>
+          <article class="brand-card" aria-labelledby="h-hon">
+            <div class="b-visual shot-site"><img src="img/hon-chlorella.jpg" width="720" height="540" loading="lazy" decoding="async" alt="Verpakking van Natural Green Chlorella van Health of Nature naast een plant."></div>
             <div class="b-body">
+              <img class="b-mark" src="img/hon-logo.png" width="400" height="129" loading="lazy" decoding="async" alt="Logo Health of Nature">
               <p class="v-tags">Gezondheid · Import &amp; distributie · Merkontwikkeling</p>
               <h3 id="h-hon" class="v-name">Health of Nature</h3>
               <p class="b-lead">Ervaring met handel, distributie en commerciële ontwikkeling van natuurlijke gezondheidsproducten.</p>
               <p>Vanuit Domein Stam houd ik mij bezig met Health of Nature, een merk binnen de markt voor natuurlijke gezondheidsproducten. Met onder andere Natural Green Chlorella en Spirulina richt het merk zich op de distributie en commerciële ontwikkeling van voedingssupplementen.</p>
               <p class="v-quiet">Hier komen twintig jaar branche-ervaring samen met inkoop, leveranciersrelaties, groothandel, merkpositionering en commerciële bedrijfsvoering.</p>
               <a class="v-link ul" href="https://www.healthofnature.nl/" rel="noopener">healthofnature.nl <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </li>
+        <li class="reveal">
+          <article class="brand-card" aria-labelledby="h-ad">
+            <div class="b-visual ad-panel" aria-hidden="true"><p class="ad-since"><span>Sinds</span>2014</p><p class="ad-line">Webshop in gezondheid en zelfzorg</p></div>
+            <div class="b-body">
+              <img class="b-mark b-mark-wide" src="img/adviesdrogisterij-logo.svg" width="783" height="93" loading="lazy" decoding="async" alt="Logo Adviesdrogisterij.nl">
+              <p class="v-tags">E-commerce · Ondernemerschap · Gezondheid · Sinds 2014</p>
+              <h3 id="h-ad" class="v-name">Adviesdrogisterij.nl</h3>
+              <p class="b-lead">Ervaring met het ontwikkelen en exploiteren van een online handelsbedrijf.</p>
+              <p>Een e-commerceonderneming in gezondheidsproducten en zelfzorgmiddelen die ik sinds 2014 jarenlang heb geleid en ontwikkeld: van commerciële strategie en bedrijfsvoering tot organisatieverbetering, logistiek en digitalisering.</p>
+              <ul class="b-chips" aria-label="Betrokken bij">
+                <li>Commercie &amp; online marketing</li><li>E-commerce</li><li>Inkoop &amp; leveranciers</li><li>Logistiek &amp; voorraad</li><li>Personeel</li><li>Organisatie&shy;ontwikkeling</li><li>Procesverbetering</li><li>Financiën</li><li>IT &amp; automatisering</li>
+              </ul>
+              <p class="v-status"><span class="v-badge">Overdracht</span> Wordt in november 2026 overgedragen aan een nieuwe eigenaar en is daarna geen onderdeel van Domein Stam.</p>
+              <a class="v-link ul" href="https://www.adviesdrogisterij.nl/" rel="noopener">adviesdrogisterij.nl <span aria-hidden="true">↗</span></a>
             </div>
           </article>
         </li>
