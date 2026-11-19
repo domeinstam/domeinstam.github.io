@@ -1,0 +1,56 @@
+# Teksten van apps.domeinstam.nl. Te bewerken via apps.domeinstam.nl/admin
+pagina:
+  titel: Apps · Rens Stam
+  beschrijving: "De apps waar Rens Stam (Domein Stam) aan werkt: Atempo, Restavia en Only Sun."
+  deel_titel: Apps · Rens Stam
+  deel_beschrijving: De apps waar ik aan werk. Meer over mij op domeinstam.nl.
+intro:
+  kicker: Domein Stam · Apps
+  titel: Apps
+  ondertitel: Waar ik nu aan werk.
+  tekst: Eigen toepassingen in ontwikkeling en praktische hulpmiddelen. Wie ik ben en waarmee ik ondernemers en organisaties help, lees je op domeinstam.nl.
+  knop_apps: Bekijk de apps
+  knop_over_mij: Over mij
+apps:
+  titel: Apps waar ik aan werk
+  ondertitel: Van eerste idee tot werkende toepassing.
+atempo:
+  label: Gezondheid & beweging
+  status: In ontwikkeling
+  naam: Atempo
+  slogan: Move. Recover. Grow.
+  tekst: Een persoonlijke trainingsapp voor hardlopen, kracht, mobiliteit en herstel.
+  knop: Open Atempo
+restavia:
+  label: Ontspanning
+  status: In ontwikkeling
+  naam: Restavia
+  slogan: Breathe. Feel. Flow.
+  tekst: Een digitale toepassing gericht op ademhaling, humming en ontspanning.
+  knop: Open Restavia
+onlysun:
+  label: Zonne-energie
+  status: Eigen gebruik
+  naam: Only Sun
+  slogan: Laden op de zon.
+  alineas:
+    - "Mijn auto laadt zoveel mogelijk met stroom afkomstig van de zonnepanelen. Only Sun kijkt hoeveel zonne-energie er over is en laat de laadpaal precies dat gebruiken: schijnt de zon volop, dan laadt hij sneller; schuift er een wolk voor, dan laadt hij rustiger."
+    - "Een natuurlijke aanpak: meebewegen met de zon, in plaats van er tegenin. Het draait lokaal op een eigen server, met een eenvoudig dashboard als kijkvenster."
+  slot: Draait lokaal · niet openbaar
+  stappen:
+    - titel: Zon meten
+      tekst: Wat de panelen opwekken en het huis verbruikt.
+    - titel: Overschot berekenen
+      tekst: Hoeveel zonnestroom er over is voor de auto.
+    - titel: Meebewegen
+      tekst: De laadpaal laadt mee met de zon.
+    - titel: Nacht
+      tekst: Wat de zon niet haalt, volgt 's nachts volgens plan.
+meer:
+  titel: Meer over mij?
+  titel_accent: Kijk op domeinstam.nl
+  tekst: Daar lees je mijn verhaal, waarmee ik help en hoe je contact met me opneemt.
+  knop: Naar domeinstam.nl
+voettekst:
+  naam: © 2026 Rens Stam · Domein Stam
+  slogan: Meedenken. Verbeteren. Realiseren.

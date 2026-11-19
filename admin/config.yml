@@ -1,0 +1,119 @@
+# Sveltia CMS (Decap-compatibel): teksten van apps.domeinstam.nl bewerken op apps.domeinstam.nl/admin.
+# Inloggen met een fine-grained GitHub-token dat deze repo mag bewerken.
+backend:
+  name: github
+  repo: domeinstam/domeinstam.github.io
+  branch: main
+  commit_messages:
+    update: "Tekst bijgewerkt via beheer"
+
+site_url: https://apps.domeinstam.nl
+display_url: https://apps.domeinstam.nl
+media_folder: img
+public_folder: /img
+
+collections:
+  - name: teksten
+    label: Teksten
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: Teksten van apps.domeinstam.nl
+        file: _data/teksten.yml
+        fields:
+          - label: Pagina (titel in het tabblad en bij delen)
+            name: pagina
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Titel in het tabblad, name: titel, widget: string }
+              - { label: Omschrijving voor zoekmachines, name: beschrijving, widget: text }
+              - { label: "Titel bij delen (LinkedIn, WhatsApp)", name: deel_titel, widget: string }
+              - { label: Omschrijving bij delen, name: deel_beschrijving, widget: text }
+
+          - label: Intro (bovenaan)
+            name: intro
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Regel boven de titel, name: kicker, widget: string }
+              - { label: Titel, name: titel, widget: string }
+              - { label: Ondertitel (schuin), name: ondertitel, widget: string }
+              - { label: Introductietekst, name: tekst, widget: text }
+              - { label: Knop naar de apps, name: knop_apps, widget: string }
+              - { label: Knop Over mij, name: knop_over_mij, widget: string }
+
+          - label: 01 Apps (kop)
+            name: apps
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Kop, name: titel, widget: string }
+              - { label: Regel naast de kop, name: ondertitel, widget: string }
+
+          - label: App – Atempo
+            name: atempo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Status, name: status, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Slogan, name: slogan, widget: string }
+              - { label: Tekst, name: tekst, widget: text }
+              - { label: Knoptekst, name: knop, widget: string }
+
+          - label: App – Restavia
+            name: restavia
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Status, name: status, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Slogan, name: slogan, widget: string }
+              - { label: Tekst, name: tekst, widget: text }
+              - { label: Knoptekst, name: knop, widget: string }
+
+          - label: App – Only Sun
+            name: onlysun
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Status, name: status, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Slogan, name: slogan, widget: string }
+              - label: Alinea's
+                name: alineas
+                widget: list
+                label_singular: alinea
+                field: { label: Alinea, name: alinea, widget: text }
+              - { label: Tekst bij het slotje, name: slot, widget: string }
+              - label: Stappen
+                name: stappen
+                widget: list
+                label_singular: stap
+                summary: "{{fields.titel}}"
+                fields:
+                  - { label: Titel, name: titel, widget: string }
+                  - { label: Tekst, name: tekst, widget: string }
+
+          - label: 02 Meer over mij
+            name: meer
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Kop, name: titel, widget: string }
+              - { label: "Kop (tweede deel, schuin)", name: titel_accent, widget: string }
+              - { label: Tekst, name: tekst, widget: text }
+              - { label: Knoptekst, name: knop, widget: string }
+
+          - label: Voettekst
+            name: voettekst
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Naam en jaar, name: naam, widget: string }
+              - { label: Slotregel, name: slogan, widget: string }

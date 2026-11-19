@@ -1,18 +1,21 @@
-<!doctype html>
+---
+# Teksten staan in _data/teksten.yml en zijn te bewerken via /admin
+---
+{% assign t = site.data.teksten %}<!doctype html>
 <html lang="nl">
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Apps · Rens Stam</title>
-<meta name="description" content="De apps waar Rens Stam (Domein Stam) aan werkt: Atempo, Restavia en Only Sun.">
+<title>{{ t.pagina.titel | escape }}</title>
+<meta name="description" content="{{ t.pagina.beschrijving | escape }}">
 <meta name="author" content="Rens Stam">
 <link rel="canonical" href="https://apps.domeinstam.nl/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Domein Stam">
-<meta property="og:title" content="Apps · Rens Stam">
-<meta property="og:description" content="De apps waar ik aan werk. Meer over mij op domeinstam.nl.">
+<meta property="og:title" content="{{ t.pagina.deel_titel | escape }}">
+<meta property="og:description" content="{{ t.pagina.deel_beschrijving | escape }}">
 <meta property="og:url" content="https://apps.domeinstam.nl/">
 <link rel="icon" href="data:,">
 <meta name="theme-color" content="#F4EFE5">
@@ -334,12 +337,12 @@ footer p{margin:0}
 
   <header class="hero">
     <div>
-      <p class="kicker">Domein Stam · Apps</p>
-      <h1><span class="l1">Apps</span> <span class="l2">Waar ik nu aan werk.</span></h1>
-      <p class="lead">Eigen toepassingen in ontwikkeling en praktische hulpmiddelen. Wie ik ben en waarmee ik ondernemers en organisaties help, lees je op domeinstam.nl.</p>
+      <p class="kicker">{{ t.intro.kicker | escape }}</p>
+      <h1><span class="l1">{{ t.intro.titel | escape }}</span> <span class="l2">{{ t.intro.ondertitel | escape }}</span></h1>
+      <p class="lead">{{ t.intro.tekst | escape }}</p>
       <div class="hero-ctas">
-        <a class="pill pill-solid" href="#apps">Bekijk de apps <span class="arr" aria-hidden="true">↓</span></a>
-        <a class="pill pill-line" href="https://domeinstam.nl/">Over mij</a>
+        <a class="pill pill-solid" href="#apps">{{ t.intro.knop_apps | escape }} <span class="arr" aria-hidden="true">↓</span></a>
+        <a class="pill pill-line" href="https://domeinstam.nl/">{{ t.intro.knop_over_mij | escape }}</a>
       </div>
     </div>
 
@@ -368,28 +371,28 @@ footer p{margin:0}
   <section class="sec biz-sec" id="apps" aria-labelledby="h-apps">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div><span class="num">01</span><h2 id="h-apps">Apps waar ik aan werk</h2></div>
-        <p>Van eerste idee tot werkende toepassing.</p>
+        <div><span class="num">01</span><h2 id="h-apps">{{ t.apps.titel | escape }}</h2></div>
+        <p>{{ t.apps.ondertitel | escape }}</p>
       </div>
       <div class="feat-grid">
         <article class="feat atempo reveal">
           <div class="feat-text">
-            <ul class="tags"><li class="tag">Gezondheid &amp; beweging</li><li class="tag status">In ontwikkeling</li></ul>
-            <h3><a href="trainingsplan/">Atempo</a></h3>
-            <p class="slogan">Move. Recover. Grow.</p>
-            <p class="desc">Een persoonlijke trainingsapp voor hardlopen, kracht, mobiliteit en herstel.</p>
-            <span class="cta" aria-hidden="true">Open Atempo <span class="arr">→</span></span>
+            <ul class="tags"><li class="tag">{{ t.atempo.label | escape }}</li><li class="tag status">{{ t.atempo.status | escape }}</li></ul>
+            <h3><a href="trainingsplan/">{{ t.atempo.naam | escape }}</a></h3>
+            <p class="slogan">{{ t.atempo.slogan | escape }}</p>
+            <p class="desc">{{ t.atempo.tekst | escape }}</p>
+            <span class="cta" aria-hidden="true">{{ t.atempo.knop | escape }} <span class="arr">→</span></span>
           </div>
           <figure class="phone"><img src="img/atempo.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Schermafbeelding van Atempo op een telefoon: het scherm Vandaag met de Atempo Coach."></figure>
         </article>
 
         <article class="feat restavia reveal">
           <div class="feat-text">
-            <ul class="tags"><li class="tag">Ontspanning</li><li class="tag status">In ontwikkeling</li></ul>
-            <h3><a href="https://app.phytoforsan.nl/">Restavia</a></h3>
-            <p class="slogan">Breathe. Feel. Flow.</p>
-            <p class="desc">Een digitale toepassing gericht op ademhaling, humming en ontspanning.</p>
-            <span class="cta" aria-hidden="true">Open Restavia <span class="arr">→</span></span>
+            <ul class="tags"><li class="tag">{{ t.restavia.label | escape }}</li><li class="tag status">{{ t.restavia.status | escape }}</li></ul>
+            <h3><a href="https://app.phytoforsan.nl/">{{ t.restavia.naam | escape }}</a></h3>
+            <p class="slogan">{{ t.restavia.slogan | escape }}</p>
+            <p class="desc">{{ t.restavia.tekst | escape }}</p>
+            <span class="cta" aria-hidden="true">{{ t.restavia.knop | escape }} <span class="arr">→</span></span>
           </div>
           <figure class="phone"><img src="img/restavia.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Schermafbeelding van Restavia op een telefoon: het beginscherm met de vraag hoe je je vandaag voelt."></figure>
         </article>
@@ -398,20 +401,16 @@ footer p{margin:0}
       <article class="biz sun reveal">
         <svg class="sun-art" viewBox="0 0 300 300" aria-hidden="true" focusable="false"><g fill="none" stroke="#E3A73A" stroke-width="1.5"><circle cx="150" cy="150" r="140" opacity=".35"/><circle cx="150" cy="150" r="116" opacity=".45"/><circle cx="150" cy="150" r="92" opacity=".6"/><circle cx="150" cy="150" r="70" opacity=".8"/></g><circle cx="150" cy="150" r="48" fill="#F2B53C"/></svg>
         <div>
-          <ul class="tags"><li class="tag">Zonne-energie</li><li class="tag status">Eigen gebruik</li></ul>
-          <h3>Only Sun</h3>
-          <p class="slogan">Laden op de zon.</p>
-          <p class="desc">Mijn auto laadt zoveel mogelijk met stroom afkomstig van de zonnepanelen. Only Sun kijkt hoeveel zonne-energie er over is en laat de laadpaal precies dat gebruiken: schijnt de zon volop, dan laadt hij sneller; schuift er een wolk voor, dan laadt hij rustiger.</p>
-          <p class="desc">Een natuurlijke aanpak: meebewegen met de zon, in plaats van er tegenin. Het draait lokaal op een eigen server, met een eenvoudig dashboard als kijkvenster.</p>
-          <div>
-            <span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Draait lokaal · niet openbaar</span>
+          <ul class="tags"><li class="tag">{{ t.onlysun.label | escape }}</li><li class="tag status">{{ t.onlysun.status | escape }}</li></ul>
+          <h3>{{ t.onlysun.naam | escape }}</h3>
+          <p class="slogan">{{ t.onlysun.slogan | escape }}</p>
+          {% for alinea in t.onlysun.alineas %}<p class="desc">{{ alinea | escape }}</p>
+          {% endfor %}<div>
+            <span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>{{ t.onlysun.slot | escape }}</span>
           </div>
-          <ol class="flow" aria-label="Zo werkt Only Sun">
-            <li><div><b>Zon meten</b><span>Wat de panelen opwekken en het huis verbruikt.</span></div></li>
-            <li><div><b>Overschot berekenen</b><span>Hoeveel zonnestroom er over is voor de auto.</span></div></li>
-            <li><div><b>Meebewegen</b><span>De laadpaal laadt mee met de zon.</span></div></li>
-            <li><div><b>Nacht</b><span>Wat de zon niet haalt, volgt 's nachts volgens plan.</span></div></li>
-          </ol>
+          <ol class="flow" aria-label="Zo werkt {{ t.onlysun.naam | escape }}">
+            {% for stap in t.onlysun.stappen %}<li><div><b>{{ stap.titel | escape }}</b><span>{{ stap.tekst | escape }}</span></div></li>
+            {% endfor %}</ol>
         </div>
         <figure class="phone"><img src="img/onlysun.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Voorbeeld van Only Sun op een telefoon: de zon levert 4,9 kW, waarvan 4,2 kW naar de auto gaat."></figure>
       </article>
@@ -422,10 +421,10 @@ footer p{margin:0}
   <section class="contact" id="meer" aria-labelledby="h-meer">
     <div class="wrap reveal">
       <span class="num">02</span>
-      <h2 id="h-meer">Meer over mij? <em>Kijk op domeinstam.nl</em></h2>
-      <p>Daar lees je mijn verhaal, waarmee ik help en hoe je contact met me opneemt.</p>
+      <h2 id="h-meer">{{ t.meer.titel | escape }} <em>{{ t.meer.titel_accent | escape }}</em></h2>
+      <p>{{ t.meer.tekst | escape }}</p>
       <div class="contact-btns">
-        <a class="wa" href="https://domeinstam.nl/">Naar domeinstam.nl <span aria-hidden="true">→</span></a>
+        <a class="wa" href="https://domeinstam.nl/">{{ t.meer.knop | escape }} <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -433,8 +432,8 @@ footer p{margin:0}
 
 <footer>
   <div class="wrap">
-    <p>© 2026 Rens Stam · Domein Stam</p>
-    <p>Meedenken. Verbeteren. Realiseren.</p>
+    <p>{{ t.voettekst.naam | escape }}</p>
+    <p>{{ t.voettekst.slogan | escape }}</p>
   </div>
 </footer>
 
