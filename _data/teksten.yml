@@ -46,6 +46,23 @@ onlysun:
       tekst: De laadpaal laadt mee met de zon.
     - titel: Nacht
       tekst: Wat de zon niet haalt, volgt 's nachts volgens plan.
+spellen:
+  label: Educatief
+  status: Online
+  naam: Topografie oefenen
+  slogan: Leren met de kaart.
+  tekst: Drie oefenspellen voor topografie. Kies een spel, vul je naam in en oefen door te klikken of te typen op de kaart.
+  knop: Naar de spellen
+  spellen:
+    - naam: Landen in en rondom Azië
+      tekst: De landen van Azië, per regio.
+      afbeelding: spel-azie.jpg
+    - naam: Nederlandse waterwerken
+      tekst: Zuiderzeewerken, Deltawerken, rivieren en landschappen.
+      afbeelding: spel-water.jpg
+    - naam: VS staten oefenen
+      tekst: De 48 staten, in sets van 10.
+      afbeelding: spel-vs.jpg
 meer:
   titel: Meer over mij?
   titel_accent: Kijk op domeinstam.nl

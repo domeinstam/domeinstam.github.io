@@ -161,6 +161,19 @@ a{color:inherit}
 .flow b{display:block;font-weight:600;font-size:.95rem}
 .flow span{display:block;font-size:.85rem;color:#B9B3A6;line-height:1.45}
 
+/* educatieve spellen: frisse variant van de projectkaart */
+.biz.edu{background:#E4EFEC;color:#17312E}
+.biz.edu:hover{box-shadow:0 24px 50px -28px rgba(23,49,46,.45)}
+.biz.edu .tag{background:rgba(23,49,46,.08);color:#17312E}
+.biz.edu .tag.status{background:#2F7F7A;color:#F3F7F6}
+.biz.edu .slogan{color:#2F7F7A}
+.biz.edu .desc{color:#35504C}
+.biz.edu .cta{background:#17312E;color:#F3F7F6;margin-left:0}
+.edu-games{list-style:none;margin:0;padding:0;display:grid;gap:.75rem;align-self:center}
+.edu-games li{display:grid;grid-template-columns:6.5rem 1fr;gap:1rem;align-items:center;background:#fff;border:1px solid #D2E2DE;border-radius:14px;padding:.6rem;font-size:.85rem;line-height:1.4;color:#4F6662}
+.edu-games img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:50% 20%;border-radius:9px;display:block}
+.edu-games b{display:block;font-size:.95rem;color:#17312E;margin-bottom:.1rem}
+
 /* ---------- ondernemerschap & merken ---------- */
 /* Only Sun: zonnige variant van de projectkaart */
 .biz.sun{background:#F7E3B0;color:#2A2110}
@@ -412,6 +425,19 @@ footer p{margin:0}
             {% endfor %}</ol>
         </div>
         <figure class="phone"><img src="img/onlysun.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Voorbeeld van Only Sun op een telefoon: de zon levert 4,9 kW, waarvan 4,2 kW naar de auto gaat."></figure>
+      </article>
+
+      <article class="biz edu reveal">
+        <div>
+          <ul class="tags"><li class="tag">{{ t.spellen.label | escape }}</li><li class="tag status">{{ t.spellen.status | escape }}</li></ul>
+          <h3><a href="https://oefenen.domeinstam.nl/">{{ t.spellen.naam | escape }}</a></h3>
+          <p class="slogan">{{ t.spellen.slogan | escape }}</p>
+          <p class="desc">{{ t.spellen.tekst | escape }}</p>
+          <span class="cta" aria-hidden="true">{{ t.spellen.knop | escape }} <span class="arr">→</span></span>
+        </div>
+        <ul class="edu-games">
+{% for g in t.spellen.spellen %}          <li><img src="img/{{ g.afbeelding | escape }}" width="699" height="432" loading="lazy" decoding="async" alt=""><span><b>{{ g.naam | escape }}</b>{{ g.tekst | escape }}</span></li>
+{% endfor %}        </ul>
       </article>
 
     </div>

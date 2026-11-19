@@ -100,6 +100,27 @@ collections:
                   - { label: Titel, name: titel, widget: string }
                   - { label: Tekst, name: tekst, widget: string }
 
+          - label: Educatieve spellen
+            name: spellen
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Status, name: status, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Slogan, name: slogan, widget: string }
+              - { label: Tekst, name: tekst, widget: text }
+              - { label: Knoptekst, name: knop, widget: string }
+              - label: Spellen
+                name: spellen
+                widget: list
+                label_singular: spel
+                summary: "{{fields.naam}}"
+                fields:
+                  - { label: Naam, name: naam, widget: string }
+                  - { label: Tekst, name: tekst, widget: string }
+                  - { label: "Afbeelding (bestandsnaam in img/)", name: afbeelding, widget: string }
+
           - label: 02 Meer over mij
             name: meer
             widget: object
