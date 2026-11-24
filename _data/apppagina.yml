@@ -80,7 +80,7 @@ restavia:
   slogan: Breathe. Feel. Flow.
   app_url: https://restavia.web.app/
   knop_open: Open Restavia
-  afbeelding: img/restavia.jpg
+  afbeelding: img/restavia.jpg?v=2
   afbeelding_alt: "Schermafbeelding van Restavia op een telefoon: het beginscherm met de vraag hoe je je vandaag voelt."
   thema_titel: Waar Restavia over gaat
   themas: [Ademhaling, Humming, Ontspanning, Bewustwording, Herstel, Balans]
