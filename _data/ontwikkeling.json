@@ -50,7 +50,7 @@
       "titel": "Hardlopen perfectioneren",
       "fase": "ontwikkeling",
       "kop": "Hardlopen — onze huidige focus",
-      "tekst": "Atempo wordt stap voor stap verder ontwikkeld. Momenteel ligt de nadruk op het perfectioneren van de hardloopmodule. We verbeteren trainingsschema's, intervaltrainingen, hartslag- en tempobewaking en de integratie met Garmin.\n\nHet doel is een betrouwbare, persoonlijke trainingsomgeving waarin gebruikers bewust kunnen trainen en hun ontwikkeling kunnen volgen.",
+      "tekst": "Momenteel ligt de nadruk op het perfectioneren van de hardloopmodule. We verbeteren trainingsschema's, intervaltrainingen, hartslag- en tempobewaking en de integratie met Garmin.\n\nHet doel is een betrouwbare, persoonlijke trainingsomgeving waarin gebruikers bewust kunnen trainen en hun ontwikkeling kunnen volgen.",
       "punten": [
         "Persoonlijke hardloopschema's",
         "Intervaltrainingen",
@@ -65,7 +65,7 @@
       ],
       "bijgewerkt": "2026-11-24",
       "alineas": [
-        "Atempo wordt stap voor stap verder ontwikkeld. Momenteel ligt de nadruk op het perfectioneren van de hardloopmodule. We verbeteren trainingsschema's, intervaltrainingen, hartslag- en tempobewaking en de integratie met Garmin.",
+        "Momenteel ligt de nadruk op het perfectioneren van de hardloopmodule. We verbeteren trainingsschema's, intervaltrainingen, hartslag- en tempobewaking en de integratie met Garmin.",
         "Het doel is een betrouwbare, persoonlijke trainingsomgeving waarin gebruikers bewust kunnen trainen en hun ontwikkeling kunnen volgen."
       ],
       "fase_label": "In ontwikkeling",
@@ -130,7 +130,7 @@
       "app": "restavia",
       "volgorde": 1,
       "titel": "Ademhalingssessies en protocollen",
-      "fase": "gepland",
+      "fase": "ontwikkeling",
       "kop": "Ademhaling — de basis van Restavia",
       "tekst": "We werken aan het verder ontwikkelen en verfijnen van verschillende ademhalingssessies. Iedere sessie heeft een eigen karakter, van een kort moment van ontspanning tot een uitgebreidere oefening waarin ademhaling, humming en bewustwording samenkomen.\n\nDaarbij besteden we aandacht aan het ademhalingsritme, de opbouw van oefeningen en een natuurlijke begeleiding door de verschillende sessiefasen.",
       "punten": [
@@ -146,15 +146,15 @@
         "We werken aan het verder ontwikkelen en verfijnen van verschillende ademhalingssessies. Iedere sessie heeft een eigen karakter, van een kort moment van ontspanning tot een uitgebreidere oefening waarin ademhaling, humming en bewustwording samenkomen.",
         "Daarbij besteden we aandacht aan het ademhalingsritme, de opbouw van oefeningen en een natuurlijke begeleiding door de verschillende sessiefasen."
       ],
-      "fase_label": "Gepland",
-      "fase_emoji": "📋"
+      "fase_label": "In ontwikkeling",
+      "fase_emoji": "🔧"
     },
     {
       "id": "restavia-fase-2",
       "app": "restavia",
       "volgorde": 2,
       "titel": "Gesproken begeleiding en stemsturing",
-      "fase": "gepland",
+      "fase": "ontwikkeling",
       "kop": "Gesproken begeleiding — aandacht voor het moment",
       "tekst": "We ontwikkelen gesproken begeleiding die gebruikers op een rustige en natuurlijke manier door ademhalingssessies leidt.\n\nDoor duidelijke instructies en subtiele aanwijzingen hoeft de aandacht niet voortdurend naar het scherm te gaan. Zo ontstaat meer ruimte om de ademhaling, klank en ontspanning bewust te ervaren.",
       "punten": [
@@ -172,15 +172,15 @@
         "We ontwikkelen gesproken begeleiding die gebruikers op een rustige en natuurlijke manier door ademhalingssessies leidt.",
         "Door duidelijke instructies en subtiele aanwijzingen hoeft de aandacht niet voortdurend naar het scherm te gaan. Zo ontstaat meer ruimte om de ademhaling, klank en ontspanning bewust te ervaren."
       ],
-      "fase_label": "Gepland",
-      "fase_emoji": "📋"
+      "fase_label": "In ontwikkeling",
+      "fase_emoji": "🔧"
     },
     {
       "id": "restavia-fase-3",
       "app": "restavia",
       "volgorde": 3,
       "titel": "Muziek, klank en geluidsbeleving",
-      "fase": "gepland",
+      "fase": "ontwikkeling",
       "kop": "Muziek & klank — een verdiepende ervaring",
       "tekst": "Naast ademhaling en humming werken we aan de verdere integratie van muziek en geluid.\n\nDoor klank, achtergrondmuziek en gesproken begeleiding zorgvuldig op elkaar af te stemmen, willen we een rustige en samenhangende sessie-ervaring creëren.\n\nDaarbij staat niet de hoeveelheid geluid centraal, maar de manier waarop geluid de oefening ondersteunt.",
       "punten": [
@@ -199,8 +199,8 @@
         "Door klank, achtergrondmuziek en gesproken begeleiding zorgvuldig op elkaar af te stemmen, willen we een rustige en samenhangende sessie-ervaring creëren.",
         "Daarbij staat niet de hoeveelheid geluid centraal, maar de manier waarop geluid de oefening ondersteunt."
       ],
-      "fase_label": "Gepland",
-      "fase_emoji": "📋"
+      "fase_label": "In ontwikkeling",
+      "fase_emoji": "🔧"
     },
     {
       "id": "restavia-fase-4",
@@ -261,7 +261,7 @@
       "omschrijving": "Meer en verder uitgewerkte ademhalingssessies, met verschillende ademhalingsritmes en patronen.",
       "punten": [],
       "categorie": "Ademhaling",
-      "fase": "gepland",
+      "fase": "ontwikkeling",
       "beschikbaarheid": "intern",
       "toegevoegd": "2026-11-24",
       "bijgewerkt": "2026-11-24",
@@ -269,8 +269,8 @@
       "versie": null,
       "prioriteit": "normaal",
       "beschikbaarheid_label": "Intern",
-      "fase_label": "Gepland",
-      "fase_emoji": "📋"
+      "fase_label": "In ontwikkeling",
+      "fase_emoji": "🔧"
     },
     {
       "id": "restavia-002",
@@ -279,7 +279,7 @@
       "omschrijving": "De opbouw, de overgangen tussen fasen en de sessieduur van de bestaande protocollen verfijnen.",
       "punten": [],
       "categorie": "Ademhaling",
-      "fase": "gepland",
+      "fase": "ontwikkeling",
       "beschikbaarheid": "intern",
       "toegevoegd": "2026-11-24",
       "bijgewerkt": "2026-11-24",
@@ -287,8 +287,8 @@
       "versie": null,
       "prioriteit": "normaal",
       "beschikbaarheid_label": "Intern",
-      "fase_label": "Gepland",
-      "fase_emoji": "📋"
+      "fase_label": "In ontwikkeling",
+      "fase_emoji": "🔧"
     },
     {
       "id": "restavia-003",
@@ -297,7 +297,7 @@
       "omschrijving": "Gesproken instructies die je rustig door een sessie leiden, zodat je aandacht minder naar het scherm hoeft.",
       "punten": [],
       "categorie": "Begeleiding",
-      "fase": "gepland",
+      "fase": "ontwikkeling",
       "beschikbaarheid": "intern",
       "toegevoegd": "2026-11-24",
       "bijgewerkt": "2026-11-24",
@@ -305,8 +305,8 @@
       "versie": null,
       "prioriteit": "normaal",
       "beschikbaarheid_label": "Intern",
-      "fase_label": "Gepland",
-      "fase_emoji": "📋"
+      "fase_label": "In ontwikkeling",
+      "fase_emoji": "🔧"
     },
     {
       "id": "restavia-004",
@@ -315,7 +315,7 @@
       "omschrijving": "Achtergrondmuziek die past bij het karakter van de sessie.",
       "punten": [],
       "categorie": "Audio",
-      "fase": "gepland",
+      "fase": "ontwikkeling",
       "beschikbaarheid": "intern",
       "toegevoegd": "2026-11-24",
       "bijgewerkt": "2026-11-24",
@@ -323,8 +323,8 @@
       "versie": null,
       "prioriteit": "normaal",
       "beschikbaarheid_label": "Intern",
-      "fase_label": "Gepland",
-      "fase_emoji": "📋"
+      "fase_label": "In ontwikkeling",
+      "fase_emoji": "🔧"
     },
     {
       "id": "restavia-005",
@@ -333,7 +333,7 @@
       "omschrijving": "De hummingtonen bij de sessies verder verfijnen.",
       "punten": [],
       "categorie": "Humming",
-      "fase": "gepland",
+      "fase": "ontwikkeling",
       "beschikbaarheid": "intern",
       "toegevoegd": "2026-11-24",
       "bijgewerkt": "2026-11-24",
@@ -341,8 +341,8 @@
       "versie": null,
       "prioriteit": "normaal",
       "beschikbaarheid_label": "Intern",
-      "fase_label": "Gepland",
-      "fase_emoji": "📋"
+      "fase_label": "In ontwikkeling",
+      "fase_emoji": "🔧"
     },
     {
       "id": "restavia-006",
