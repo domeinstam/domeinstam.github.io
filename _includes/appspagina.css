@@ -71,8 +71,10 @@
 .leeg{color:var(--muted);margin:0;padding:1.2rem 1.4rem;border:1px dashed var(--line);border-radius:16px}
 
 .switch{background:var(--bg-2)}
-.switch .wrap{padding-top:3rem;padding-bottom:3rem;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+.switch .wrap{padding-top:3rem;padding-bottom:3rem;display:flex;flex-wrap:wrap;gap:1.2rem 2.5rem;align-items:center;justify-content:flex-start}
 .switch p{margin:0;font:400 1.4rem/1.2 var(--serif)}
+.switch .switch-k{display:block;margin:0 0 .35rem;font:600 .78rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.switch p em{display:block;margin-top:.25rem;font-size:1.05rem;color:var(--resin-ink)}
 .switch .app-ctas{margin-top:0}
 .switch .pill-solid,.switch .pill-line{min-height:48px}
 

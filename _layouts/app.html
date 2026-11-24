@@ -131,9 +131,9 @@
 
   <section class="switch" aria-label="{{ alg.ook_bekijken | escape }}">
     <div class="wrap">
-      <p>{{ alg.ook_bekijken | escape }}: {{ b.naam | escape }}</p>
+      <div class="switch-tekst"><span class="switch-k">{{ alg.ook_bekijken | escape }}</span><p>{{ b.naam | escape }} <em>{{ b.slogan | escape }}</em></p></div>
       <div class="app-ctas">
-        <a class="pill pill-solid" href="/{{ andere }}/">{{ b.naam | escape }} <span class="arr" aria-hidden="true">→</span></a>
+        <a class="pill pill-solid" href="/{{ andere }}/">{{ alg.ontdek | escape }} {{ b.naam | escape }} <span class="arr" aria-hidden="true">→</span></a>
         <a class="pill pill-line" href="/"><span aria-hidden="true">←</span> {{ alg.terug_overzicht | escape }}</a>
       </div>
     </div>
