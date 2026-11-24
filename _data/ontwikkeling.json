@@ -1,0 +1,156 @@
+{
+  "bijgewerkt": "2026-11-24",
+  "fasen": [
+    {
+      "id": "idee",
+      "label": "Idee",
+      "emoji": "💡",
+      "uitleg": "Een mogelijke verbetering of nieuwe functionaliteit."
+    },
+    {
+      "id": "gepland",
+      "label": "Gepland",
+      "emoji": "📋",
+      "uitleg": "Een verbetering die is geselecteerd voor toekomstige ontwikkeling."
+    },
+    {
+      "id": "ontwikkeling",
+      "label": "In ontwikkeling",
+      "emoji": "🔧",
+      "uitleg": "De functionaliteit wordt daadwerkelijk ontwikkeld."
+    },
+    {
+      "id": "test",
+      "label": "Testfase",
+      "emoji": "🧪",
+      "uitleg": "De functionaliteit wordt gecontroleerd en getest."
+    },
+    {
+      "id": "gerealiseerd",
+      "label": "Gerealiseerd",
+      "emoji": "✅",
+      "uitleg": "De functionaliteit is getest en beschikbaar gesteld."
+    }
+  ],
+  "apps": {
+    "atempo": {
+      "naam": "Atempo",
+      "slogan": "Move. Recover. Grow."
+    },
+    "restavia": {
+      "naam": "Restavia",
+      "slogan": "Breathe. Feel. Flow."
+    }
+  },
+  "planning": [
+    {
+      "id": "atempo-fase-1",
+      "app": "atempo",
+      "volgorde": 1,
+      "titel": "Hardlopen perfectioneren",
+      "fase": "ontwikkeling",
+      "kop": "Hardlopen — onze huidige focus",
+      "tekst": "Atempo wordt stap voor stap verder ontwikkeld. Momenteel ligt de nadruk op het perfectioneren van de hardloopmodule. We verbeteren trainingsschema's, intervaltrainingen, hartslag- en tempobewaking en de integratie met Garmin.\n\nHet doel is een betrouwbare, persoonlijke trainingsomgeving waarin gebruikers bewust kunnen trainen en hun ontwikkeling kunnen volgen.",
+      "punten": [
+        "Persoonlijke hardloopschema's",
+        "Intervaltrainingen",
+        "Hartslagzones Z1 t/m Z5",
+        "Trainingsintensiteit",
+        "Dubbele intensiteitsbewaking met hartslag en tempo",
+        "Garmin-integratie",
+        "Betrouwbare registratie van trainingsgegevens",
+        "Analyse van trainingsresultaten",
+        "Persoonlijke voortgang",
+        "Gebruiksgemak en betrouwbaarheid"
+      ],
+      "bijgewerkt": "2026-11-24",
+      "alineas": [
+        "Atempo wordt stap voor stap verder ontwikkeld. Momenteel ligt de nadruk op het perfectioneren van de hardloopmodule. We verbeteren trainingsschema's, intervaltrainingen, hartslag- en tempobewaking en de integratie met Garmin.",
+        "Het doel is een betrouwbare, persoonlijke trainingsomgeving waarin gebruikers bewust kunnen trainen en hun ontwikkeling kunnen volgen."
+      ],
+      "fase_label": "In ontwikkeling",
+      "fase_emoji": "🔧"
+    },
+    {
+      "id": "atempo-fase-2",
+      "app": "atempo",
+      "volgorde": 2,
+      "titel": "Krachttraining en oefeningen",
+      "fase": "gepland",
+      "kop": "Kracht & mobiliteit — de volgende stap",
+      "tekst": "Na het optimaliseren van de hardloopmodule richten we ons op de verdere ontwikkeling van krachttraining en mobiliteit.\n\nDaarbij staan praktische oefeningen, persoonlijke trainingsschema's en een overzichtelijke registratie van uitgevoerde trainingen centraal.",
+      "punten": [
+        "Oefenbibliotheek",
+        "Persoonlijke krachttrainingsschema's",
+        "Sets en herhalingen",
+        "Gebruikte gewichten",
+        "Mobiliteitsoefeningen",
+        "Ondersteunende oefeningen voor hardlopers",
+        "Opbouw van trainingsbelasting",
+        "Herstel"
+      ],
+      "bijgewerkt": "2026-11-24",
+      "alineas": [
+        "Na het optimaliseren van de hardloopmodule richten we ons op de verdere ontwikkeling van krachttraining en mobiliteit.",
+        "Daarbij staan praktische oefeningen, persoonlijke trainingsschema's en een overzichtelijke registratie van uitgevoerde trainingen centraal."
+      ],
+      "fase_label": "Gepland",
+      "fase_emoji": "📋"
+    },
+    {
+      "id": "atempo-fase-3",
+      "app": "atempo",
+      "volgorde": 3,
+      "titel": "Krachtlog en vooruitgang",
+      "fase": "gepland",
+      "kop": "Inzicht in vooruitgang",
+      "tekst": "Een belangrijk onderdeel van Atempo is het inzichtelijk maken van persoonlijke ontwikkeling.\n\nMet een krachtlogboek, voortgangsgrafieken en persoonlijke doelen willen we gebruikers steeds beter laten zien welke vooruitgang zij boeken.\n\nZo brengt Atempo beweging, kracht en herstel samen in één persoonlijke trainingsomgeving.",
+      "punten": [
+        "Persoonlijk krachtlogboek",
+        "Registratie van uitgevoerde trainingen",
+        "Ontwikkeling van kracht",
+        "Trainingsbelasting",
+        "Persoonlijke belastbaarheid",
+        "Voortgangsgrafieken",
+        "Persoonlijke trainingsdoelen",
+        "Behaalde resultaten",
+        "Inzicht in ontwikkeling over langere perioden"
+      ],
+      "bijgewerkt": "2026-11-24",
+      "alineas": [
+        "Een belangrijk onderdeel van Atempo is het inzichtelijk maken van persoonlijke ontwikkeling.",
+        "Met een krachtlogboek, voortgangsgrafieken en persoonlijke doelen willen we gebruikers steeds beter laten zien welke vooruitgang zij boeken.",
+        "Zo brengt Atempo beweging, kracht en herstel samen in één persoonlijke trainingsomgeving."
+      ],
+      "fase_label": "Gepland",
+      "fase_emoji": "📋"
+    }
+  ],
+  "logboek": [
+    {
+      "id": "atempo-001",
+      "app": "atempo",
+      "titel": "Dubbele intensiteitsbewaking — hartslag & tempo",
+      "omschrijving": "Bij hartslaggestuurde hardlooptrainingen kan een onnauwkeurige hartslagmeting ertoe leiden dat gebruikers onbedoeld te snel gaan lopen. We ontwikkelen daarom een aanvullende controle waarbij hartslagzones worden gecombineerd met persoonlijke tempobandbreedtes. Hiermee kan Atempo helpen om tijdens intervaltrainingen binnen de gewenste trainingsintensiteit te blijven, ook wanneer de hartslagmeting minder betrouwbaar is. De uitbreiding wordt eerst getest binnen een persoonlijk account.",
+      "punten": [
+        "Persoonlijke tempobandbreedtes per hartslagzone",
+        "Waarschuwingen tijdens intervaltrainingen",
+        "Compatibiliteit met Garmin",
+        "Registratie van tempo- en hartslaggegevens",
+        "Analyse van intervalresultaten",
+        "Mogelijkheden voor toekomstige persoonlijke kalibratie"
+      ],
+      "categorie": "Hardlopen",
+      "fase": "test",
+      "beschikbaarheid": "persoonlijke-test",
+      "toegevoegd": "2026-11-24",
+      "bijgewerkt": "2026-11-24",
+      "gerealiseerd": null,
+      "versie": "3.2.6",
+      "prioriteit": "hoog",
+      "beschikbaarheid_label": "Persoonlijke test",
+      "fase_label": "Testfase",
+      "fase_emoji": "🧪"
+    }
+  ]
+}

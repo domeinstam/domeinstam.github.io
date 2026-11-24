@@ -1,0 +1,144 @@
+{% assign alg = site.data.apppagina.algemeen %}{% assign a = site.data.apppagina[page.app] %}{% assign o = site.data.ontwikkeling %}{% assign plan = o.planning | where: "app", page.app %}{% assign log = o.logboek | where: "app", page.app %}{% if page.app == "atempo" %}{% assign andere = "restavia" %}{% else %}{% assign andere = "atempo" %}{% endif %}{% assign b = site.data.apppagina[andere] %}<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ a.pagina_titel | escape }}</title>
+<meta name="description" content="{{ a.beschrijving | escape }}">
+<meta name="author" content="Rens Stam">
+<link rel="canonical" href="https://apps.domeinstam.nl/{{ page.app }}/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Domein Stam">
+<meta property="og:title" content="{{ a.pagina_titel | escape }}">
+<meta property="og:description" content="{{ a.beschrijving | escape }}">
+<meta property="og:url" content="https://apps.domeinstam.nl/{{ page.app }}/">
+<meta property="og:image" content="https://apps.domeinstam.nl/img/logo/deelafbeelding.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/logo/icoon.svg" type="image/svg+xml">
+<link rel="icon" href="/img/logo/icoon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/logo/icoon-180.png">
+<meta name="theme-color" content="#F4EFE5">
+<style>{% include stijl.css %}{% include appspagina.css %}</style>
+</head>
+<body class="app-page app-{{ page.app }}">
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+
+<div class="hero-shell">
+<div class="wrap app-top">
+  <div class="top">
+    <a class="brand-logo" href="https://domeinstam.nl/" aria-label="Domein Stam, naar domeinstam.nl"><img src="/img/logo/boom-logo.svg" width="284" height="352" alt=""><span class="brand-name">Domein Stam</span></a>
+    <nav class="nav app-nav" aria-label="Hoofdmenu">
+      <a class="ul" href="/">{{ alg.alle_apps | escape }}</a>
+      <a class="ul"{% if page.app == "atempo" %} aria-current="page"{% endif %} href="/atempo/">Atempo</a>
+      <a class="ul"{% if page.app == "restavia" %} aria-current="page"{% endif %} href="/restavia/">Restavia</a>
+      <a class="ul opt" href="https://domeinstam.nl/#contact">{{ alg.contact | escape }}</a>
+    </nav>
+  </div>
+
+  <header class="app-hero">
+    <article class="feat app-feat {{ page.app }}">
+      <div class="feat-text">
+        <ul class="tags"><li class="tag">{{ alg.kicker | escape }}</li></ul>
+        <h1>{{ a.naam | escape }}</h1>
+        <p class="slogan">{{ a.slogan | escape }}</p>
+        {% for al in a.intro %}<p class="lead">{{ al | escape }}</p>
+        {% endfor %}<ul class="themes" aria-label="{{ a.thema_titel | escape }}">{% for t in a.themas %}<li>{{ t | escape }}</li>{% endfor %}</ul>
+        <div class="app-ctas">
+          <a class="btn-open" href="{{ a.app_url }}">{{ a.knop_open | escape }} <span aria-hidden="true">→</span></a>
+          <a class="btn-back" href="/"><span aria-hidden="true">←</span> {{ alg.terug_overzicht | escape }}</a>
+        </div>
+      </div>
+      <figure class="phone"><img src="/{{ a.afbeelding }}" width="585" height="1170" decoding="async" alt="{{ a.afbeelding_alt | escape }}"></figure>
+    </article>
+  </header>
+</div>
+</div>
+
+<main id="inhoud">
+  <section class="sec" aria-labelledby="h-functies">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="num">01</span><h2 id="h-functies">{{ a.functies_titel | escape }}</h2></div><p>{{ a.functies_ondertitel | escape }}</p></div>
+      <div class="fn-grid">
+        {% for f in a.functies %}<div class="fn"><h3>{{ f.titel | escape }}</h3><p>{{ f.tekst | escape }}</p></div>
+        {% endfor %}
+      </div>
+      {% if a.in_ontwikkeling.size > 0 %}<h3 class="soon-head">{{ a.in_ontwikkeling_titel | escape }}</h3>
+      <div class="fn-grid">
+        {% for f in a.in_ontwikkeling %}<div class="fn soon"><h3>{{ f.titel | escape }}</h3><p>{{ f.tekst | escape }}</p></div>
+        {% endfor %}
+      </div>{% endif %}
+    </div>
+  </section>
+
+  <section class="sec biz-sec" aria-labelledby="h-waar">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="num">02</span><h2 id="h-waar">{{ a.waar_titel | escape }}</h2></div><p>{{ a.waar_ondertitel | escape }}</p></div>
+      {% if plan.size > 0 %}
+      <ol class="tl">
+        {% for p in plan %}<li{% if p.fase == "ontwikkeling" or p.fase == "test" %} class="is-now"{% endif %}><b>{{ p.titel | escape }}</b><span><span class="st st-{{ p.fase }}">{{ p.fase_emoji }} {{ p.fase_label }}</span></span></li>
+        {% endfor %}
+      </ol>
+      {% for p in plan %}{% if p.fase == "ontwikkeling" or p.fase == "test" %}<div class="phase">
+        <div><span class="st st-{{ p.fase }}">{{ p.fase_emoji }} {{ p.fase_label }}</span>
+          <h3>{{ p.kop | escape }}</h3>
+          {% for al in p.alineas %}<p>{{ al | escape }}</p>
+          {% endfor %}</div>
+        <ul class="chips">{% for x in p.punten %}<li>{{ x | escape }}</li>{% endfor %}</ul>
+      </div>{% endif %}{% endfor %}
+      {% else %}<p class="leeg">{{ alg.planning_leeg | escape }}</p>{% endif %}
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-log">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="num">03</span><h2 id="h-log">{{ a.logboek_titel | escape }}</h2></div><p>{{ a.logboek_ondertitel | escape }}</p></div>
+      {% if log.size > 0 %}
+      <div class="log-grid">
+        {% for l in log limit:6 %}{% include log-kaart.html l=l geen_openbaar=alg.geen_openbaar meer_over=alg.meer_over versie=alg.versie gerealiseerd_op=alg.gerealiseerd_op bijgewerkt_op=alg.bijgewerkt_op %}
+        {% endfor %}
+      </div>
+      {% if log.size > 6 %}<details class="alle"><summary>{{ alg.alle_verbeteringen | escape }}</summary>
+        <div class="log-grid">
+          {% for l in log offset:6 %}{% include log-kaart.html l=l geen_openbaar=alg.geen_openbaar meer_over=alg.meer_over versie=alg.versie gerealiseerd_op=alg.gerealiseerd_op bijgewerkt_op=alg.bijgewerkt_op %}
+          {% endfor %}
+        </div></details>{% endif %}
+      {% else %}<p class="leeg">{{ alg.logboek_leeg | escape }}</p>{% endif %}
+    </div>
+  </section>
+
+  {% assign toekomst = 0 %}{% for p in plan %}{% unless p.fase == "ontwikkeling" or p.fase == "test" or p.fase == "gerealiseerd" %}{% assign toekomst = toekomst | plus: 1 %}{% endunless %}{% endfor %}
+  {% if toekomst > 0 %}<section class="sec biz-sec" aria-labelledby="h-toekomst">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="num">04</span><h2 id="h-toekomst">{{ a.toekomst_titel | escape }}</h2></div><p>{{ a.toekomst_ondertitel | escape }}</p></div>
+      {% for p in plan %}{% unless p.fase == "ontwikkeling" or p.fase == "test" or p.fase == "gerealiseerd" %}<div class="phase">
+        <div><span class="st st-{{ p.fase }}">{{ p.fase_emoji }} {{ p.fase_label }}</span>
+          <h3>{{ p.kop | escape }}</h3>
+          {% for al in p.alineas %}<p>{{ al | escape }}</p>
+          {% endfor %}</div>
+        <ul class="chips">{% for x in p.punten %}<li>{{ x | escape }}</li>{% endfor %}</ul>
+      </div>{% endunless %}{% endfor %}
+    </div>
+  </section>{% endif %}
+
+  <section class="switch" aria-label="{{ alg.ook_bekijken | escape }}">
+    <div class="wrap">
+      <p>{{ alg.ook_bekijken | escape }}: {{ b.naam | escape }}</p>
+      <div class="app-ctas">
+        <a class="pill pill-solid" href="/{{ andere }}/">{{ b.naam | escape }} <span class="arr" aria-hidden="true">→</span></a>
+        <a class="pill pill-line" href="/"><span aria-hidden="true">←</span> {{ alg.terug_overzicht | escape }}</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>{{ alg.voettekst_naam | escape }}</p>
+    <p>{{ alg.voettekst_slogan | escape }}</p>
+  </div>
+</footer>
+</body>
+</html>

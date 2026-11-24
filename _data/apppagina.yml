@@ -1,0 +1,109 @@
+# Teksten van de app-pagina's (apps.domeinstam.nl/atempo en /restavia). De ontwikkelplanning en het logboek staan NIET hier maar in
+# _data/ontwikkeling.json (gegenereerd uit het ontwikkelregister).
+algemeen:
+  kicker: Domein Stam · Apps
+  alle_apps: Alle apps
+  ook_bekijken: Ook bekijken
+  terug_overzicht: Terug naar alle apps
+  contact: Contact
+  voettekst_naam: © 2026 Rens Stam · Domein Stam
+  voettekst_slogan: Meedenken. Verbeteren. Realiseren.
+  geen_openbaar: Nog niet openbaar beschikbaar
+  planning_leeg: Hier verschijnt de ontwikkelplanning zodra die is vastgesteld.
+  logboek_leeg: Hier verschijnen de verbeteringen zodra ze zijn vastgelegd.
+  alle_verbeteringen: Bekijk alle verbeteringen
+  meer_over: Wat wordt onderzocht?
+  versie: Versie
+  gerealiseerd_op: Gerealiseerd op
+  bijgewerkt_op: Bijgewerkt
+  toegelicht: Wat dit omvat
+atempo:
+  pagina_titel: Atempo · Move. Recover. Grow. · Rens Stam
+  beschrijving: "Atempo is een persoonlijke trainingsapp voor hardlopen, kracht, mobiliteit en herstel. Lees wat de app nu kan, waar we aan werken en wat er gepland staat."
+  naam: Atempo
+  slogan: Move. Recover. Grow.
+  app_url: https://atempo.web.app/
+  knop_open: Open Atempo
+  afbeelding: img/atempo.jpg?v=2
+  afbeelding_alt: "Schermafbeelding van Atempo op een telefoon: het scherm Vandaag met de Atempo Coach."
+  thema_titel: Waar Atempo over gaat
+  themas: [Hardlopen, Beweging, Kracht, Mobiliteit, Herstel, Vitaliteit, Persoonlijke ontwikkeling]
+  intro:
+    - Atempo richt zich op het ondersteunen van persoonlijke beweging, training, herstel en ontwikkeling.
+    - De toepassing brengt verschillende onderdelen van fysieke vitaliteit samen in één persoonlijke trainingsomgeving.
+  functies_titel: Wat Atempo nu kan
+  functies_ondertitel: Dit is al beschikbaar in de app.
+  functies:
+    - titel: Hardlooptrainingen en schema's
+      tekst: Persoonlijke hardloopschema's in acht niveaus, met intervaltrainingen waarin je hardloopt en wandelt. Je kiest zelf het programma waarmee je traint.
+    - titel: Hartslagzones
+      tekst: Vijf intensiteiten, van Herstel tot Zeer intensief, berekend uit je leeftijd of je eigen maximale hartslag. Het hartslagbereik staat bij elke training.
+    - titel: Garmin-koppeling
+      tekst: Via Intervals.icu gaan trainingen als gestructureerde training naar je Garmin-horloge en komen je gelopen runs terug in de app. Daarnaast kun je trainingen als FIT-bestand exporteren.
+    - titel: Herstel en Dagcheck
+      tekst: "Met een korte Dagcheck vul je in hoe je je voelt. Atempo kijkt mee en stelt voor hoe de dag past: ruimte, rustiger aan of rust."
+    - titel: Krachtlog en oefeningen
+      tekst: Een oefeninglijst en een krachtlogboek om uitgevoerde oefeningen te registreren.
+    - titel: Routines
+      tekst: Eigen routines van oefeningen, bijvoorbeeld een korte ochtendroutine met een moment van stilte.
+    - titel: Trainingsregistratie
+      tekst: Na een training beoordeel je hoe het ging. Die beoordeling bepaalt mee of een volgend niveau voor je klaar staat.
+    - titel: Persoonlijke doelen
+      tekst: Stel eigen doelen in en volg of je ze haalt.
+    - titel: Voortgang
+      tekst: Trends, metingen en je Garmin-activiteiten bij elkaar, zodat je je ontwikkeling kunt volgen.
+  in_ontwikkeling_titel: In ontwikkeling
+  in_ontwikkeling:
+    - titel: Dubbele intensiteitsbewaking
+      tekst: Hartslag en tempo samen bewaken tijdens hardlooptrainingen. Wordt eerst getest in een persoonlijk account.
+    - titel: Mobiliteit en een uitgebreidere oefenbibliotheek
+      tekst: Meer oefeningen en persoonlijke krachtschema's, na de hardloopmodule.
+    - titel: Krachtlogboek en voortgangsgrafieken
+      tekst: Meer inzicht in vooruitgang over langere perioden.
+  waar_titel: Waar werken we aan?
+  waar_ondertitel: De ontwikkeling van Atempo gaat stap voor stap.
+  logboek_titel: Ontwikkeling & verbeteringen
+  logboek_ondertitel: Concrete verbeteringen en hun stand.
+  toekomst_titel: Toekomstige ontwikkeling
+  toekomst_ondertitel: Wat volgt nadat de hardloopmodule klaar is.
+restavia:
+  pagina_titel: Restavia · Breathe. Feel. Flow. · Rens Stam
+  beschrijving: "Restavia is een app voor ademhaling, humming, ontspanning en bewustwording. Lees wat de app nu kan en hoe de ontwikkeling wordt bijgehouden."
+  naam: Restavia
+  slogan: Breathe. Feel. Flow.
+  app_url: https://restavia.web.app/
+  knop_open: Open Restavia
+  afbeelding: img/restavia.jpg
+  afbeelding_alt: "Schermafbeelding van Restavia op een telefoon: het beginscherm met de vraag hoe je je vandaag voelt."
+  thema_titel: Waar Restavia over gaat
+  themas: [Ademhaling, Humming, Ontspanning, Bewustwording, Herstel, Balans]
+  intro:
+    - Restavia richt zich op ademhaling, humming, ontspanning en bewustwording.
+    - De toepassing ondersteunt gebruikers bij het bewust ervaren van ademhaling, klank en ontspanning.
+  functies_titel: Wat Restavia nu kan
+  functies_ondertitel: Dit is al beschikbaar in de app.
+  functies:
+    - titel: Ademhalingsoefeningen
+      tekst: Acht ademsessies van 3 tot 10 minuten, zoals Lange Uitademing, Resonantie Adem, Slaapadem en Ochtend Adem.
+    - titel: Humming
+      tekst: Zes hummingsessies van 4 tot 12 minuten, van een Korte Reset tot Stillness Flow.
+    - titel: Klank
+      tekst: Klanksessies met MAEN, AMEN en OM.
+    - titel: Meditatietimer
+      tekst: Een meditatietimer met een duur die je zelf kiest.
+    - titel: Begeleide sessies
+      tekst: Elke sessie laat de opbouw zien, bijvoorbeeld 5 seconden in en 5 seconden uit, met een rustige aanwijzing per fase.
+    - titel: Persoonlijke instellingen
+      tekst: Je stelt het volume van muziek en signalen in, kiest achtergrondgeluid en bepaalt of er geluid of trilling bij een fasewisseling komt.
+    - titel: Sessieregistratie
+      tekst: Je ziet per week hoeveel sessies en minuten je deed en op hoeveel dagen, met een weekoverzicht.
+    - titel: Verdieping
+      tekst: Extra sessies rond emotionele regulatie, prikkelarme rust en slaap en herstel, en testprotocollen. Deze onderdelen staan vergrendeld in de bibliotheek.
+  in_ontwikkeling_titel: In ontwikkeling
+  in_ontwikkeling: []
+  waar_titel: Waar werken we aan?
+  waar_ondertitel: De ontwikkelplanning van Restavia.
+  logboek_titel: Ontwikkeling & verbeteringen
+  logboek_ondertitel: Concrete verbeteringen en hun stand.
+  toekomst_titel: Toekomstige ontwikkeling
+  toekomst_ondertitel: Wat in de toekomst kan volgen.
