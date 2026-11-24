@@ -81,12 +81,13 @@
         {% for al in a.waar_intro %}<p>{{ al | escape }}</p>
         {% endfor %}{% if a.waar_slot %}<p class="waar-slot">{{ a.waar_slot | escape }}</p>{% endif %}
       </div>{% endif %}
+      {% assign actief = 0 %}{% for p in plan %}{% if p.fase == "ontwikkeling" or p.fase == "test" %}{% assign actief = actief | plus: 1 %}{% endif %}{% endfor %}{% assign focus_id = "" %}{% if actief == 0 and plan.size > 0 %}{% assign focus_id = plan[0].id %}{% endif %}
       {% if plan.size > 0 %}
       <ol class="tl{% if plan.size == 4 %} tl-4{% endif %}">
-        {% for p in plan %}<li{% if p.fase == "ontwikkeling" or p.fase == "test" %} class="is-now"{% endif %}><b>{{ p.titel | escape }}</b><span><span class="st st-{{ p.fase }}">{{ p.fase_emoji }} {{ p.fase_label }}</span></span></li>
+        {% for p in plan %}<li{% if p.fase == "ontwikkeling" or p.fase == "test" or p.id == focus_id %} class="is-now"{% endif %}><b>{{ p.titel | escape }}</b><span><span class="st st-{{ p.fase }}">{{ p.fase_emoji }} {{ p.fase_label }}</span></span></li>
         {% endfor %}
       </ol>
-      {% for p in plan %}{% if p.fase == "ontwikkeling" or p.fase == "test" %}<div class="phase">
+      {% for p in plan %}{% if p.fase == "ontwikkeling" or p.fase == "test" or p.id == focus_id %}<div class="phase">
         <div><span class="st st-{{ p.fase }}">{{ p.fase_emoji }} {{ p.fase_label }}</span>
           <h3>{{ p.kop | escape }}</h3>
           {% for al in p.alineas %}<p>{{ al | escape }}</p>
@@ -114,11 +115,11 @@
     </div>
   </section>
 
-  {% assign toekomst = 0 %}{% for p in plan %}{% unless p.fase == "ontwikkeling" or p.fase == "test" or p.fase == "gerealiseerd" %}{% assign toekomst = toekomst | plus: 1 %}{% endunless %}{% endfor %}
+  {% assign toekomst = 0 %}{% for p in plan %}{% unless p.fase == "ontwikkeling" or p.fase == "test" or p.fase == "gerealiseerd" or p.id == focus_id %}{% assign toekomst = toekomst | plus: 1 %}{% endunless %}{% endfor %}
   {% if toekomst > 0 %}<section class="sec biz-sec" aria-labelledby="h-toekomst">
     <div class="wrap">
       <div class="sec-head"><div><span class="num">04</span><h2 id="h-toekomst">{{ a.toekomst_titel | escape }}</h2></div><p>{{ a.toekomst_ondertitel | escape }}</p></div>
-      {% for p in plan %}{% unless p.fase == "ontwikkeling" or p.fase == "test" or p.fase == "gerealiseerd" %}<div class="phase">
+      {% for p in plan %}{% unless p.fase == "ontwikkeling" or p.fase == "test" or p.fase == "gerealiseerd" or p.id == focus_id %}<div class="phase">
         <div><span class="st st-{{ p.fase }}">{{ p.fase_emoji }} {{ p.fase_label }}</span>
           <h3>{{ p.kop | escape }}</h3>
           {% for al in p.alineas %}<p>{{ al | escape }}</p>
