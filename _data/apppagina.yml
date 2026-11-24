@@ -103,6 +103,12 @@ restavia:
   in_ontwikkeling: []
   waar_titel: Waar werken we aan?
   waar_ondertitel: De ontwikkelplanning van Restavia.
+  waar_kop: Restavia blijft in beweging
+  waar_intro:
+    - Restavia is een toepassing voor bewuste ademhaling, humming en ontspanning. We ontwikkelen de app stap voor stap verder, met aandacht voor eenvoud, beleving en persoonlijke begeleiding.
+    - Onze planning begint bij het uitbreiden en verfijnen van ademhalingssessies. Daarna volgen gesproken begeleiding en de verdere integratie van muziek en klank.
+    - "Ons doel is een omgeving waarin ademhaling, geluid en visuele begeleiding op een natuurlijke manier samenkomen. Een plek waar je even kunt vertragen, je aandacht naar binnen kunt richten en bewust ruimte kunt maken voor ontspanning."
+  waar_slot: Breathe. Feel. Flow.
   logboek_titel: Ontwikkeling & verbeteringen
   logboek_ondertitel: Concrete verbeteringen en hun stand.
   toekomst_titel: Toekomstige ontwikkeling

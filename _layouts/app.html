@@ -76,8 +76,13 @@
   <section class="sec biz-sec" aria-labelledby="h-waar">
     <div class="wrap">
       <div class="sec-head"><div><span class="num">02</span><h2 id="h-waar">{{ a.waar_titel | escape }}</h2></div><p>{{ a.waar_ondertitel | escape }}</p></div>
+      {% if a.waar_kop %}<div class="waar-intro">
+        <h3>{{ a.waar_kop | escape }}</h3>
+        {% for al in a.waar_intro %}<p>{{ al | escape }}</p>
+        {% endfor %}{% if a.waar_slot %}<p class="waar-slot">{{ a.waar_slot | escape }}</p>{% endif %}
+      </div>{% endif %}
       {% if plan.size > 0 %}
-      <ol class="tl">
+      <ol class="tl{% if plan.size == 4 %} tl-4{% endif %}">
         {% for p in plan %}<li{% if p.fase == "ontwikkeling" or p.fase == "test" %} class="is-now"{% endif %}><b>{{ p.titel | escape }}</b><span><span class="st st-{{ p.fase }}">{{ p.fase_emoji }} {{ p.fase_label }}</span></span></li>
         {% endfor %}
       </ol>

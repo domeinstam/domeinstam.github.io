@@ -75,3 +75,11 @@
 .switch p{margin:0;font:400 1.4rem/1.2 var(--serif)}
 .switch .app-ctas{margin-top:0}
 .switch .pill-solid,.switch .pill-line{min-height:48px}
+
+.tl-4{grid-template-columns:1fr}
+@media (min-width:40rem){.tl-4{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:64rem){.tl-4{grid-template-columns:repeat(4,1fr)}}
+.waar-intro{margin:0 0 1.8rem;max-width:42rem}
+.waar-intro h3{margin:0 0 .6rem;font:400 clamp(1.5rem,3.4vw,2.1rem)/1.15 var(--serif)}
+.waar-intro p{margin:.7rem 0 0}
+.waar-intro .waar-slot{font:italic 400 1.1rem/1.3 var(--serif);color:var(--resin-ink)}
