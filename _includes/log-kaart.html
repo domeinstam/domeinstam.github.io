@@ -4,5 +4,5 @@
   <p>{{ include.l.omschrijving | escape }}</p>
   {% if include.l.beschikbaarheid != "openbaar" %}<span class="nog">{{ include.geen_openbaar | escape }}</span>{% endif %}
   {% if include.l.punten.size > 0 %}<details><summary>{{ include.meer_over | escape }}</summary><ul>{% for p in include.l.punten %}<li>{{ p | escape }}</li>{% endfor %}</ul></details>{% endif %}
-  <span class="fine">{% if include.l.versie %}{{ include.versie | escape }} {{ include.l.versie | escape }} · {% endif %}{% if include.l.gerealiseerd %}{{ include.gerealiseerd_op | escape }} {{ include.l.gerealiseerd | date: "%d-%m-%Y" }}{% else %}{{ include.bijgewerkt_op | escape }} {{ include.l.bijgewerkt | date: "%d-%m-%Y" }}{% endif %}</span>
+  {% if include.l.versie or include.l.gerealiseerd %}<span class="fine">{% if include.l.versie %}{{ include.versie | escape }} {{ include.l.versie | escape }}{% endif %}{% if include.l.versie and include.l.gerealiseerd %} · {% endif %}{% if include.l.gerealiseerd %}{{ include.gerealiseerd_op | escape }} {{ include.l.gerealiseerd | date: "%d-%m-%Y" }}{% endif %}</span>{% endif %}
 </article>
